@@ -373,8 +373,8 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .contact-handle a:hover{text-decoration:underline}
 
 /* شكر بالفوتر */
-.footer-thanks{width:100%;text-align:center;color:rgba(159,247,232,.42);font-size:.62rem;line-height:1.7;padding-top:2px}
-.footer-thanks b{color:rgba(159,247,232,.62);font-weight:600}
+.footer-thanks{width:100%;text-align:center;color:rgba(159,247,232,.52);font-size:.72rem;line-height:1.7;padding-top:4px}
+.footer-thanks b{color:rgba(159,247,232,.78);font-weight:600}
 
 /* Modal القراء */
 .modal{position:fixed;inset:0;z-index:200;visibility:hidden;opacity:0;pointer-events:none;transition:opacity .38s ease, visibility .38s ease}
