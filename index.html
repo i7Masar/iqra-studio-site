@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="استوديو اقرأ - إنتاج صوتي ومرئي، مونتاج، تصميم موشن جرافيك، وخدمات إبداعية بجودة احترافية.">
+  <title>استوديو اقرأ | Iqra Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== خلفية مؤثرات ===== -->
+  <div class="fx" aria-hidden="true">
+    <canvas id="particles" class="fx-canvas"></canvas>
+    <div class="fx-grid"></div>
+    <div class="fx-glow fx-glow-a"></div>
+    <div class="fx-glow fx-glow-b"></div>
+    <div class="fx-glow fx-glow-c"></div>
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+  </div>
+
+  <!-- ===== النافبار ===== -->
+  <header class="nav" id="nav">
+    <a class="brand" href="#hero" aria-label="استوديو اقرأ">
+      <span class="brand-mark">
+        <span class="brand-iqra">اقرأ</span>
+        <span class="brand-sub">STUDIO</span>
+      </span>
+      <span class="brand-divider"></span>
+      <span class="brand-name">استوديو اقرأ</span>
+    </a>
+    <div class="nav-actions">
+      <button class="icon-btn" id="readersBtn" aria-label="قراء استوديو اقرأ" title="قراء استوديو اقرأ">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 11a7 7 0 0 1-14 0"/><path d="M12 18v4M8 22h8"/></svg>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">من نحن</a>
+      <a href="#services">الخدمات</a>
+      <a href="#pricing">الأسعار</a>
+      <a href="#payment">طرق الدفع</a>
+      <a href="#contact" class="nav-cta">ابدأ مشروعك</a>
+    </nav>
+  </header>
+
+  <!-- ===== البطل ===== -->
+  <section class="hero section" id="hero">
+    <div class="hero-copy">
+      <p class="eyebrow reveal">
+        <span class="eyebrow-dot"></span>
+        إبداع يُسمَع ويُرَى
+      </p>
+      <h1 class="hero-title reveal">
+        <span class="line">نحوّل أفكارك</span>
+        <span class="line">إلى تجربة <span class="grad-word">استثنائية</span></span>
+      </h1>
+      <p class="hero-desc reveal">
+        استوديو اقرأ مساحة إبداعية متكاملة للإنتاج الصوتي والمرئي، المونتاج، والتصميم.
+        نصنع محتوى بجودة احترافية وهوية حديثة تترك أثرًا.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#pricing" class="btn btn-primary">
+          <span>استعرض الأسعار</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#services" class="btn btn-ghost">اكتشف خدماتنا</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <div class="stat-num" data-count="45">0</div>
+          <div class="stat-label">جنيه / دقيقة للمصريين</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-count="1" data-prefix="$">0</div>
+          <div class="stat-label">دولار / دقيقة خارج مصر</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-count="100" data-suffix="%">0</div>
+          <div class="stat-label">جودة واهتمام بالتفاصيل</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="visual-stage">
+        <div class="orbit-ring r1"></div>
+        <div class="orbit-ring r2"></div>
+        <div class="orbit-ring r3"></div>
+        <div class="orbit-glow"></div>
+        <div class="hero-wordmark float-y">
+          <span class="hw-studio">استوديو</span>
+          <span class="hw-iqra">اقرأ</span>
+          <span class="hw-line"></span>
+          <span class="hw-en">IQRA STUDIO</span>
+        </div>
+        <div class="visual-badge badge-top"><span class="pulse-dot"></span>تسجيل احترافي</div>
+        <div class="visual-badge badge-bottom">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5L12 2z"/></svg>
+          موشن جرافيك
+        </div>
+        <div class="visual-badge badge-left">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M10 9l5 3-5 3z"/></svg>
+          مونتاج
+        </div>
+        <div class="float-chip chip-1">4K</div>
+        <div class="float-chip chip-2">HD AUDIO</div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-hint" aria-label="مرر للأسفل">
+      <span>اكتشف المزيد</span>
+      <div class="scroll-line"><i></i></div>
+    </a>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>استوديو اقرأ</span><i>✦</i>
+      <span>إنتاج صوتي</span><i>✦</i>
+      <span>مونتاج فيديو</span><i>✦</i>
+      <span>موشن جرافيك</span><i>✦</i>
+      <span>تصميم إبداعي</span><i>✦</i>
+      <span>هوية بصرية</span><i>✦</i>
+      <span>استوديو اقرأ</span><i>✦</i>
+      <span>إنتاج صوتي</span><i>✦</i>
+      <span>مونتاج فيديو</span><i>✦</i>
+      <span>موشن جرافيك</span><i>✦</i>
+      <span>تصميم إبداعي</span><i>✦</i>
+      <span>هوية بصرية</span><i>✦</i>
+    </div>
+  </div>
+
+  <section class="section about" id="about">
+    <div class="section-head center reveal">
+      <p class="eyebrow"><span class="eyebrow-dot"></span>من نحن</p>
+      <h2 class="section-title">استوديو بصمة <span class="grad-word">إبداعية</span></h2>
+      <p class="section-desc">في استوديو اقرأ نجمع بين الفن والتقنية لنقدم خدمات إنتاج متكاملة، من الفكرة الأولى حتى التسليم النهائي.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-card glass reveal">
+        <div class="about-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div>
+        <h3>رؤية واضحة</h3>
+        <p>نفهم هدفك ونترجمه إلى محتوى بصري وصوتي يخاطب جمهورك بدقة.</p>
+      </div>
+      <div class="about-card glass reveal">
+        <div class="about-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h7l-1 8 10-12h-7z"/></svg></div>
+        <h3>تنفيذ سريع</h3>
+        <p>نلتزم بالجودة والسرعة معًا، لنصل بعملك إلى أفضل صورة في الوقت المناسب.</p>
+      </div>
+      <div class="about-card glass reveal">
+        <div class="about-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l2.9 6 6.6.9-4.8 4.5 1.2 6.6-5.9-3.2-5.9 3.2 1.2-6.6L2.5 8.9 9.1 8z"/></svg></div>
+        <h3>جودة احترافية</h3>
+        <p>نهتم بأدق التفاصيل في الصوت والصورة والحركة لنقدم نتيجة تليق بعلامتك.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services" id="services">
+    <div class="section-head center reveal">
+      <p class="eyebrow"><span class="eyebrow-dot"></span>خدماتنا</p>
+      <h2 class="section-title">كل ما تحتاجه <span class="grad-word">في مكان واحد</span></h2>
+      <p class="section-desc">نقدم باقة خدمات إبداعية متكاملة تغطي الصوت والصورة والحركة — بجودة تليق بمشروعك.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card glass tilt reveal">
+        <div class="service-no">01</div>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 11a7 7 0 0 1-14 0"/><path d="M12 18v4M8 22h8"/></svg></div>
+        <h3>تسجيل صوتي احترافي</h3>
+        <p>تسجيل تعليق صوتي، بودكاست، قرآن، أو محتوى تعليمي بصوت نقي ومعالجة احترافية.</p>
+        <div class="service-tags"><span>Voice Over</span><span>Podcast</span></div>
+      </article>
+      <article class="service-card glass tilt reveal">
+        <div class="service-no">02</div>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M10 8l6 3-6 3z"/></svg></div>
+        <h3>مونتاج فيديو</h3>
+        <p>قص، ترتيب، مؤثرات، وانتقالات سلسة تحول اللقطات الخام إلى قصة مؤثرة.</p>
+        <div class="service-tags"><span>Editing</span><span>Color</span></div>
+      </article>
+      <article class="service-card glass tilt reveal">
+        <div class="service-no">03</div>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5L12 2z"/></svg></div>
+        <h3>موشن جرافيك</h3>
+        <p>رسوم متحركة إبداعية تشرح فكرتك، تروّج لمنتجك، وتمنح محتواك حياة وحركة.</p>
+        <div class="service-tags"><span>Motion</span><span>Animation</span></div>
+      </article>
+      <article class="service-card glass tilt reveal">
+        <div class="service-no">04</div>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20h16M4 20l4-14h8l4 14M8 14h8"/></svg></div>
+        <h3>تصميم إبداعي</h3>
+        <p>تصاميم بصرية وهوية جذابة للسوشيال ميديا، الإعلانات، والعروض التقديمية.</p>
+        <div class="service-tags"><span>Design</span><span>Branding</span></div>
+      </article>
+      <article class="service-card glass tilt reveal">
+        <div class="service-no">05</div>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M10 8l6 4-6 4z"/></svg></div>
+        <h3>إنتاج محتوى</h3>
+        <p>من الفكرة والسيناريو إلى الإنتاج النهائي — محتوى متكامل جاهز للنشر والتأثير.</p>
+        <div class="service-tags"><span>Content</span><span>Production</span></div>
+      </article>
+      <article class="service-card glass tilt reveal">
+        <div class="service-no">06</div>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>استشارات إبداعية</h3>
+        <p>نساعدك في اختيار الأسلوب المناسب، نبرة الصوت، والاتجاه البصري الأنسب لمشروعك.</p>
+        <div class="service-tags"><span>Strategy</span><span>Creative</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section pricing" id="pricing">
+    <div class="section-head center reveal">
+      <p class="eyebrow"><span class="eyebrow-dot"></span>الأسعار</p>
+      <h2 class="section-title">أسعار واضحة <span class="grad-word">بلا مفاجآت</span></h2>
+      <p class="section-desc">اختر الباقة المناسبة لك. الأسعار محسوبة بالدقيقة لتمنحك مرونة كاملة في حجم مشروعك.</p>
+    </div>
+    <div class="pricing-grid">
+      <article class="price-card glass reveal">
+        <div class="price-head">
+          <div class="price-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <p class="price-for">للمصريين</p>
+          <h3>التسجيل والإنتاج</h3>
+        </div>
+        <div class="price-value"><span class="currency">ج.م</span><span class="amount">45</span><span class="per">/ للدقيقة</span></div>
+        <ul class="price-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>تسجيل صوتي بجودة عالية</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>معالجة وتنقية الصوت</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>تسليم ملف جاهز للنشر</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>سعر خاص داخل مصر</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost btn-block">احجز الآن</a>
+      </article>
+      <article class="price-card glass featured reveal">
+        <div class="featured-badge">الأكثر طلبًا</div>
+        <div class="price-head">
+          <div class="price-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 4 5.8 4 9s-1.5 6.3-4 9c-2.5-2.7-4-5.8-4-9s1.5-6.3 4-9z"/></svg></div>
+          <p class="price-for">خارج مصر</p>
+          <h3>التسجيل والإنتاج</h3>
+        </div>
+        <div class="price-value"><span class="currency">$</span><span class="amount">1</span><span class="per">/ للدقيقة</span></div>
+        <ul class="price-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>تسجيل صوتي بجودة عالية</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>معالجة وتنقية الصوت</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>تسليم ملف جاهز للنشر</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>متاح للعملاء حول العالم</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-block">احجز الآن</a>
+      </article>
+      <article class="price-card glass reveal">
+        <div class="price-head">
+          <div class="price-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5L12 2z"/></svg></div>
+          <p class="price-for">خدمة إبداعية</p>
+          <h3>تصميم أو مونتاج</h3>
+        </div>
+        <div class="price-value"><span class="currency">$</span><span class="amount">3</span><span class="per">/ للدقيقة</span></div>
+        <ul class="price-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>مونتاج فيديو احترافي</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>تصميم موشن جرافيك</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>مؤثرات وانتقالات إبداعية</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>تسليم بجودة جاهزة للنشر</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost btn-block">احجز الآن</a>
+      </article>
+    </div>
+    <p class="pricing-note reveal">* الأسعار قابلة للتعديل حسب طبيعة المشروع ومتطلباته. تواصل معنا للحصول على عرض مخصص.</p>
+  </section>
+
+  <section class="section payment" id="payment">
+    <div class="payment-wrap glass reveal">
+      <div class="payment-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span>طرق الدفع</p>
+        <h2 class="section-title">ادفع بالطريقة <span class="grad-word">التي تناسبك</span></h2>
+        <p class="section-desc" style="margin:0;max-width:560px">نوفر لك خيارات دفع مرنة وحديثة لتسهيل بدء مشروعك من أي مكان في العالم.</p>
+        <div class="pay-methods">
+          <div class="pay-method">
+            <div class="pay-method-icon vodafone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/><path d="M8.5 3.8A9 9 0 1 0 18 5"/></svg></div>
+            <div><h3>فودافون كاش</h3><p>الدفع داخل مصر عبر Vodafone Cash على الرقم: <b class="vc-num" dir="ltr">01028044392</b></p></div>
+          </div>
+          <div class="pay-method">
+            <div class="pay-method-icon telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 4.2a1.2 1.2 0 0 0-1.2-.2L2.7 10.8a1 1 0 0 0 .1 1.9l4.7 1.5 1.8 5.6a1 1 0 0 0 1.7.4l2.7-2.8 4.7 3.5a1.2 1.2 0 0 0 1.9-.7l2-14.8a1.2 1.2 0 0 0-.5-1.2zM9.4 13.5l8.7-5.4-7 7.2-.3 3.2-1.4-5z"/></svg></div>
+            <div><h3>نجوم تيليجرام</h3><p>ادفع بسهولة وأمان عبر نجوم Telegram مباشرة — خيار سريع ومناسب.</p></div>
+          </div>
+          <div class="pay-method">
+            <div class="pay-method-icon crypto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M9.5 8h4a2 2 0 1 1 0 4h-4V8zm0 4h4.5a2 2 0 1 1 0 4H9.5v-4zM11 6v2m0 8v2m2-12v2m0 8v2"/></svg></div>
+            <div><h3>العملات الرقمية (Crypto)</h3><p>نقبل الدفع بالعملات الرقمية لتمنحك حرية وسرعة في التعامل من أي مكان.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="payment-visual" aria-hidden="true">
+        <div class="pay-orbit">
+          <div class="pay-orbit-ring"></div>
+          <div class="pay-orbit-ring r2"></div>
+          <div class="pay-core">
+            <span class="pay-core-word">اقرأ</span>
+          </div>
+          <div class="pay-node node-1">★</div>
+          <div class="pay-node node-2">₿</div>
+          <div class="pay-node node-3">USDT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="contact-card reveal">
+      <div class="contact-bg" aria-hidden="true"><div class="contact-glow"></div></div>
+      <p class="eyebrow"><span class="eyebrow-dot"></span>ابدأ الآن</p>
+      <h2 class="section-title">جاهز تحوّل فكرتك <span class="grad-word">لواقع؟</span></h2>
+      <p class="section-desc">تواصل معنا وأخبرنا عن مشروعك، وسنساعدك في اختيار الخدمة الأنسب وتنفيذها بأفضل جودة.</p>
+      <div class="contact-actions">
+        <!-- عدّل رابط التواصل هنا -->
+        <a href="https://t.me/i7msr" class="btn btn-primary" target="_blank" rel="noopener">
+          <span>تواصل عبر تيليجرام</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#pricing" class="btn btn-ghost">راجع الأسعار</a>
+      </div>
+      <div class="contact-chips">
+        <span class="chip">رد سريع</span>
+        <span class="chip">جودة احترافية</span>
+        <span class="chip">دفع مرن</span>
+      </div>
+      <p class="contact-handle">تيليجرام: <a href="https://t.me/i7msr" target="_blank" rel="noopener" dir="ltr">@i7msr</a></p>
+    </div>
+  </section>
+
+  <!-- شكر خاص -->
+  <aside class="side-thanks" aria-label="شكر خاص">
+    <span>شكر خاص للقارئ <b>محمد مجدي</b> على تمويل المشروع</span>
+  </aside>
+
+  <!-- نافذة القراء -->
+  <div class="modal" id="readersModal" aria-hidden="true">
+    <div class="modal-backdrop" id="readersBackdrop"></div>
+    <div class="modal-panel glass" role="dialog" aria-modal="true" aria-labelledby="readersTitle">
+      <button class="modal-close" id="readersClose" aria-label="إغلاق">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+      </button>
+      <p class="eyebrow"><span class="eyebrow-dot"></span>أصوات اقرأ</p>
+      <h2 class="modal-title" id="readersTitle">القراء الذين شاركوا <span class="grad-word">بالتسجيل</span></h2>
+      <p class="modal-desc">بداية استوديو اقرأ كانت بأصوات مميزة تركت أثرًا في مسيرتنا.</p>
+      <div class="readers-grid">
+        <div class="reader-card"><span class="reader-num">01</span><span class="reader-name">محمد مجدي</span></div>
+        <div class="reader-card"><span class="reader-num">02</span><span class="reader-name">عبدالرحمن ربيع</span></div>
+        <div class="reader-card"><span class="reader-num">03</span><span class="reader-name">محمد وليد</span></div>
+        <div class="reader-card"><span class="reader-num">04</span><span class="reader-name">عبدالرحمن مسعد</span></div>
+        <div class="reader-card"><span class="reader-num">05</span><span class="reader-name">محمد المرشد</span></div>
+        <div class="reader-card"><span class="reader-num">06</span><span class="reader-name">محمود عبده</span></div>
+        <div class="reader-card"><span class="reader-num">07</span><span class="reader-name">محمد محمود مسعد</span></div>
+        <div class="reader-card"><span class="reader-num">08</span><span class="reader-name">كريم الغنيمي</span></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-wordmark">اقرأ</span>
+        <div><strong>استوديو اقرأ</strong><span>إبداع يُسمَع ويُرَى</span></div>
+      </div>
+      <div class="footer-links">
+        <a href="#about">من نحن</a>
+        <a href="#services">الخدمات</a>
+        <a href="#pricing">الأسعار</a>
+        <a href="#payment">طرق الدفع</a>
+      </div>
+      <p class="footer-copy">© 2026 استوديو اقرأ. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
