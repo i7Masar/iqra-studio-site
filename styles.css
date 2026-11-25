@@ -372,23 +372,9 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .contact-handle a{color:var(--mint);font-family:var(--font-accent);font-size:.88rem;letter-spacing:.03em}
 .contact-handle a:hover{text-decoration:underline}
 
-/* شكر جانبي */
-.side-thanks{
-  position:fixed;left:14px;top:50%;transform:translateY(-50%);z-index:90;
-  writing-mode:vertical-rl;text-orientation:mixed;
-  font-size:.68rem;color:rgba(159,247,232,.55);letter-spacing:.02em;
-  padding:14px 8px;border-radius:14px;
-  background:rgba(7,14,26,.45);border:1px solid rgba(159,247,232,.08);
-  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
-  line-height:1.8;max-height:70vh;user-select:none;
-}
-.side-thanks b{color:rgba(159,247,232,.85);font-weight:700}
-@media (max-width: 760px){
-  .side-thanks{left:6px;font-size:.6rem;padding:10px 6px;max-height:56vh}
-}
-@media (max-width: 520px){
-  .side-thanks{left:4px;font-size:.48rem;padding:8px 4px;max-height:52vh;opacity:.75;letter-spacing:0}
-}
+/* شكر بالفوتر */
+.footer-thanks{width:100%;text-align:center;color:rgba(159,247,232,.42);font-size:.62rem;line-height:1.7;padding-top:2px}
+.footer-thanks b{color:rgba(159,247,232,.62);font-weight:600}
 
 /* Modal القراء */
 .modal{position:fixed;inset:0;z-index:200;display:none}
