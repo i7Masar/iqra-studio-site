@@ -329,8 +329,8 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
   .section{padding:80px 0}
   .nav{top:12px;width:calc(100vw - 24px);padding:12px 16px}
   .menu-btn{display:flex}
-  .nav-links{display:none;position:absolute;top:calc(100% + 10px);right:0;left:0;flex-direction:column;align-items:stretch;padding:16px;gap:4px;background:rgba(7,14,26,.95);border:1px solid rgba(159,247,232,.12);border-radius:20px;backdrop-filter:blur(20px);box-shadow:var(--shadow)}
-  .nav-links.open{display:flex}
+  .nav-links{display:flex;position:absolute;top:calc(100% + 10px);right:0;left:0;flex-direction:column;align-items:stretch;padding:16px;gap:4px;background:rgba(7,14,26,.95);border:1px solid rgba(159,247,232,.12);border-radius:20px;backdrop-filter:blur(20px);box-shadow:var(--shadow);opacity:0;transform:translateY(-10px) scale(.98);visibility:hidden;pointer-events:none;transition:opacity .3s ease, transform .3s ease, visibility .3s ease}
+  .nav-links.open{opacity:1;transform:translateY(0) scale(1);visibility:visible;pointer-events:auto}
   .nav-links a{text-align:center;padding:12px}
   .nav-links .nav-cta{margin:6px 0 0}
   .menu-btn.open span:nth-child(1){transform:translateY(4.5px) rotate(45deg)}
@@ -377,18 +377,18 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .footer-thanks b{color:rgba(159,247,232,.62);font-weight:600}
 
 /* Modal القراء */
-.modal{position:fixed;inset:0;z-index:200;display:none}
-.modal.open{display:block}
-.modal-backdrop{position:absolute;inset:0;background:rgba(2,6,14,.66);backdrop-filter:blur(8px);animation:fadeIn .35s ease}
+.modal{position:fixed;inset:0;z-index:200;visibility:hidden;opacity:0;pointer-events:none;transition:opacity .38s ease, visibility .38s ease}
+.modal.open{visibility:visible;opacity:1;pointer-events:auto}
+.modal-backdrop{position:absolute;inset:0;background:rgba(2,6,14,.66);backdrop-filter:blur(8px)}
 .modal-panel{
   position:relative;width:min(760px,calc(100vw - 32px));margin:8vh auto 0;
   padding:44px 36px;border-radius:32px;max-height:84vh;overflow:auto;
-  scrollbar-width:none;-ms-overflow-style:none;
-  animation:modalIn .45s cubic-bezier(.2,.8,.2,1);
+  scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;
+  opacity:0;transform:translateY(24px) scale(.985);
+  transition:opacity .42s ease, transform .42s cubic-bezier(.2,.8,.2,1);
 }
+.modal.open .modal-panel{opacity:1;transform:translateY(0) scale(1)}
 .modal-panel::-webkit-scrollbar{display:none}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@keyframes modalIn{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
 .modal-close{
   position:absolute;top:18px;left:18px;width:42px;height:42px;border-radius:14px;
   display:grid;place-items:center;color:var(--ink-soft);
