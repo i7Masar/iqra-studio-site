@@ -24,15 +24,17 @@
 
   // ===== نافبار عند السكرول =====
   const nav = $('#nav');
-  let lastY = 0;
-  const onScroll = () => {
+  let scrollTicking = false;
+  const updateNav = () => {
     const y = window.scrollY;
     nav.style.background = y > 40 ? 'rgba(7,14,26,.88)' : 'rgba(7,14,26,.62)';
     nav.style.boxShadow = y > 40 ? '0 14px 44px rgba(0,0,0,.35)' : '0 10px 40px rgba(0,0,0,.28)';
-    lastY = y;
+    scrollTicking = false;
   };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  window.addEventListener('scroll', () => {
+    if (!scrollTicking) { requestAnimationFrame(updateNav); scrollTicking = true; }
+  }, { passive: true });
+  updateNav();
 
   // ===== ظهور العناصر عند السكرول =====
   const revealEls = $$('.reveal');
@@ -92,10 +94,10 @@
   if (canvas && ctx && !reduceMotion) {
     let w, h, dpr, particles, raf;
     const mouse = { x: -9999, y: -9999 };
-    const COUNT = Math.min(72, Math.floor(window.innerWidth / 18));
+    const COUNT = Math.min(42, Math.floor(window.innerWidth / 24));
 
     const resize = () => {
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      dpr = Math.min(window.devicePixelRatio || 1, 1.5);
       w = canvas.clientWidth; h = canvas.clientHeight;
       canvas.width = Math.floor(w * dpr); canvas.height = Math.floor(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -118,7 +120,7 @@
 
         const dx = mouse.x - p.x, dy = mouse.y - p.y;
         const dist = Math.hypot(dx, dy);
-        if (dist < 140) { p.x -= dx * .003; p.y -= dy * .003; }
+        if (dist < 120) { p.x -= dx * .003; p.y -= dy * .003; }
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
@@ -129,10 +131,10 @@
           const q = particles[j];
           const ddx = p.x - q.x, ddy = p.y - q.y;
           const d = ddx * ddx + ddy * ddy;
-          if (d < 140 * 140) {
+          if (d < 110 * 110) {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y);
-            ctx.strokeStyle = `rgba(159,247,232,${0.10 * (1 - d / (140 * 140))})`;
+            ctx.strokeStyle = `rgba(159,247,232,${0.10 * (1 - d / (110 * 110))})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
